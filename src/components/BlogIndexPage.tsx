@@ -47,7 +47,7 @@ function BlogIndexPage({
           <a href="./rss.xml" target="_blank" style={{ float: "right" }}>
             RSS
           </a>
-          <Link href="./about">About</Link> &bull;{" "}
+          <Link href="./about">About me</Link> &bull;{" "}
           <Link href="./tags">Tags</Link> &bull;{" "}
           <a href="https://github.com/mcalus3/create-react-blog">
             Send me a pull request!
