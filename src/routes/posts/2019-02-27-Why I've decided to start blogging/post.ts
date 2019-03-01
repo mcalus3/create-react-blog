@@ -1,6 +1,6 @@
 export default {
-  title: `Welcome to my blog!`,
-  tags: ["blog"],
+  title: `Why I started writing?`,
+  tags: ["blogging", "learning"],
   spoiler: "Announcment of the blog.",
   getContent: () => import("./document.mdx")
 };
