@@ -1,17 +1,12 @@
 import React from "react";
 import styles from "./Bio.module.css";
-import { getGravatarURL } from "../utils/getGravatarURL";
+import profilePic from "../assets/profile_pic.jpg";
 
 interface BioProps {
   className?: string;
 }
 
 function Bio(props: BioProps) {
-  let photoURL = getGravatarURL({
-    email: "marek.calus3@gmail.com",
-    size: 56
-  });
-
   return (
     <div
       className={`
@@ -19,7 +14,7 @@ function Bio(props: BioProps) {
       ${props.className || ""}
     `}
     >
-      <img src={photoURL} alt="Me" />
+      <img src={profilePic} alt="Me" />
       <p>
         Blog, by <a href="https://twitter.com/marek_us">Marek Calus</a>.
         <br />

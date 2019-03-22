@@ -4,6 +4,20 @@
   font-weight: 900;
   line-height: 1.1;
   margin-top: 1.7rem;
-  margin-bottom: 2.4rem;  
+  margin-bottom: 2.4rem;
   text-rendering: optimizeLegibility;
+}
+
+.Header {
+  display: flex;
+}
+
+.Header img {
+  border-radius: 50%;
+  flex-shrink: 0;
+  height: 3.5rem;
+  margin-top: 1.3rem;
+  margin-bottom: 0;
+  margin-right: 0.875rem;
+  width: 3.5rem;
 }
