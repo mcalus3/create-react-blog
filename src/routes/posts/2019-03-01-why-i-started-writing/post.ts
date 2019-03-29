@@ -1,6 +1,7 @@
 export default {
   title: `Why I started writing?`,
-  tags: ["blog", "thoughts"],
-  spoiler: "Announcment of the blog.",
-  getContent: () => import("./document.mdx")
+  tags: ["announcments", "thoughts"],
+  spoiler: "Rationale for starting the blog.",
+  languages: ["English", "Polish"],
+  getContent: () => import("./document-" + "English" + ".mdx")
 };
