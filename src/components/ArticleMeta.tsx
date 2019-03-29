@@ -12,6 +12,7 @@ interface ArticleMetaProps {
 
 function ArticleMeta({ blogRoot, data, readingTime }: ArticleMetaProps) {
   let readingTimeElement
+  let languagesElement;
   if (readingTime) {
     let minutes = Math.max(Math.round(readingTime.minutes), 1)
     let cups = Math.round(minutes / 5)
@@ -24,6 +25,25 @@ function ArticleMeta({ blogRoot, data, readingTime }: ArticleMetaProps) {
         </span>
       </React.Fragment>
     )
+    languagesElement = (
+      <React.Fragment>
+        {data.languages && data.languages.length && (
+          <>
+            {" "}
+            &bull;{" "}
+            <ul className={styles.tags}>
+              {data.languages.map(language => (
+                <li key={language}>
+                  <Link href={"./document-" + language + ".mdx"}>
+                    {language}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </>
+        )}
+      </React.Fragment>
+    );
   }
 
   return (
@@ -43,6 +63,7 @@ function ArticleMeta({ blogRoot, data, readingTime }: ArticleMetaProps) {
         </>
       )}
       {readingTimeElement || null}
+      {languagesElement || null}
     </small>
   )
 }
