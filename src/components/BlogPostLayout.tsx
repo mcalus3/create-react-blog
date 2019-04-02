@@ -5,6 +5,7 @@ import siteMetadata from "../siteMetadata";
 import ArticleMeta from "./ArticleMeta";
 import Bio from "./Bio";
 import styles from "./BlogPostLayout.module.css";
+import useTwitterCard from "../utils/useTwitterCard";
 
 interface BlogPostLayoutProps {
   blogRoot: string;
@@ -12,6 +13,7 @@ interface BlogPostLayoutProps {
 
 function BlogPostLayout({ blogRoot }: BlogPostLayoutProps) {
   let { title, data, url } = useCurrentRoute();
+  useTwitterCard(title, data.spoiler);
 
   return (
     <View>
