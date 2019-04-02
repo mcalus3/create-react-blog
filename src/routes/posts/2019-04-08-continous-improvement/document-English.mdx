@@ -1,0 +1,87 @@
+import styles from "./document.module.css";
+import toyota from "./toyota.jpg";
+import butwait from "./theresmore.jpg";
+
+Imagine Toyota factories, back in the 1950', when Kaizen ideology was maturing among the crowded factory lanes, Japanese workers were hustling around the conveyor belts and every one of them was personally engaged in observation of the work environment around him and thinking how it could be improved. _"Maybe If we clean up the mess on the floor, we would be able to walk faster without fear of tripping over something?" "Does the machine needs oiling to maintain a good condition?"_ Continuous improvement, proactively carried out by _everyone_ was the key factor that contributed to the Toyota domination on the global car market.
+
+<img src={toyota} alt="picture" />
+
+This is exactly how we should work too. Programmers, like blacksmiths, have the ability to improve or replace every tool they use. Does any technical impediment slow down your work? Does any organizational process that you take part in is inefficient? Change it, that's what you are paid for – programmers are the people that solve problems.
+
+Well, at least it sounds easy. In my case, the harder I thought about what needs to be improved in my job, the more guilty I felt for not doing anything about it. Continuous improvement surely is necessary, but there are five reasons that comes to my head, why it's hard to start doing it:
+
+1. You feel like there is something wrong, but you don't know what exactly.
+2. There are so many things that could be improved, that you forget them after 5 minutes, or you just feel overwhelmed thinking about all of them at the same time.
+3. You don't know what to do with all of these problems. You even don't know if they **can** be improved, let alone the **How** part.
+4. In your culture, people have to act like everything was ok and they don't have any objections. Or you fear that you will expose yourself as incompetent.
+5. You just don't know when it's the right time to take care of it.
+
+I have been working for years in the condition of _"I can't make any significant progress and my everyday work is extremely daunting, but I can't tell you why exactly"_. I want to change it somehow and I wouldn't be myself if I didn't write down any process for it 😉. I present you **The workplace improvement framework** (I'm not sure if this name is adequate, because it's not tied up exclusively to the work, but nothing better comes to my head).
+
+It goes like this:
+
+1. Every time you said to yourself "What the f...", or had an urge to complain about something, write it down in your favorite ToDo app.
+2. Before you totally forget what was it about, add three pieces of information about each of it:
+   - **Context** (e.g. "I was assigned a task to block the possibility to edit the survey if it's "global". The only solution coming to my head was to make multiple changes in different source files")
+   - **Precisely, what is the problem?** (_"This solution would be time-consuming and the system would become less maintainable in the result of this change"_).
+   - **How it should be resolved?** (eg. _"Refactor the application architecture in such a way, that this task would require the change in only one place. Talk with your team leader about the problems in the architecture of your app."_)
+     Don't panic if you don't have any solution yet, you can as well just write _"schedule some time to learn how I could achieve this task without introducing duplicated code into the system."_
+
+Someone could say _"Wow, Marek, you are such a genius. You've invented a brand new approach"_, except I haven't invented anything. That's just an old, well-known structure of design patterns.
+
+<img src={butwait} alt="picture" />
+
+But wait, there's more! When you gather problems, described in such a structure, you can prioritize them (by a combination of severity, incidence, solution difficulty, etc.), reserve some regular time for "removing impediments" and start resolving them.
+
+In other words, I'm treating my personal problems as if they were bugs in software - I write them down, gather in a backlog, prioritize and allocate regular time to solve them, starting from the top of the backlog.
+
+I will go back now to the 5 reasons why it was hard to start doing it and try to answer how **The workplace improvement framework** could help with them:
+
+1. **You don't know what exactly is wrong.**
+
+   If you try to think "what sucks in my job" and nothing specific comes to your mind, the chance is that you have to start thinking more critically. Try to note next time you are annoyed by something, encounter a code smell, wait for something or just have the gut feeling that something is being done suboptimally.
+
+2. **There are too many things that could be improved.**
+
+   Divide and conquer: Write it down to get rid of it from your temporal memory. Prioritize to decide which one should you take care of first.
+
+3. **You don't know what to do with all of these problems.**
+
+   I think that probably most of the problems can't be easily solved. I think it's already valuable to have only the first step of recognizing the problem:
+   a. Be aware of what thing is slowing you down,
+   b. Know if it can be improved (or is it worth the time),
+   c. Have some plan for it,
+   d. Start doing something about it
+   The solution plan can emerge slowly. It's still better than not doing anything about it.
+
+4. **Your culture.**
+
+   That's a hard one, but you can:
+
+   - Pick one of your superiors and schedule a meeting on which you would ensure you are taken seriously
+   - Start writing about the problems in style of a "blog", for example on your organizations' confluence. In that way, you will make them visible, but won't be so vulnerable to backlash as in real conversation.
+   - Convince your team to start making regular retrospectives.
+
+5. **You just don't know when it's the right time for taking care of it.**
+
+   You can schedule a regular time for "removing impediments". If you worry that your boss wouldn't like it, you can read [Mark Seeman's blog post about who's decision it should be](https://blog.ploeh.dk/2019/03/18/the-programmer-as-decision-maker/)
+
+When I started writing this post, I wrote such a paragraph:
+
+_Is your build process taking too long and wasting your time? Utilize this waiting time in researching the build tools and improving it. Is your team working inefficiently, wasting too much time on unnecessary meetings? Introduce them "Gettings things done", or some lean management framework. Do you spend too much time reading mail discussions? introduce Slack to your team leader and suggest that you should be using it._
+
+But I think that I've explained why it's not that easy to be done. In the end, I would like to share with you a couple of points that I've written down lately, to provide further example of what I mean:
+
+1. Zostaliśmy poproszeni o estymację zadania. Zadanie było wyspecyfikowane lakonicznie, niepoprawnym angielskim, opisany został sam wygląd, bez intencji i funkcji, powiedziano nam, że i tak zostały nam na to tylko dwa tygodnie. Chłopaki wyestymowali pracę na godziny, ale wzięli je zupełnie z powietrza, nie podzielili tego na podzadania pod kątem funkcjonalności, tylko też pod kątem widoków.
+2. Bjorn jest człowiekiem, który musi nam jak najprecyzyjniej tłumaczyć i opisywać zawiłe specyfikacje aplikacji, którą piszemy. Bjorn umie mówić po angielsku tylko na poziomie podstawowym.
+3. Z naszej perspektywy praca wygląda jak wojna partyzancka. Zastanawiamy się jak najłatwiej spełnić to co jest w specce,vczesto dosłownie, wiedząc że kupi namvto trochę czasu zanim znów się odezwa że to jednak zły pomysł i zeby poprawic. Na przykład zamiast opóźniać głupie pomysły powinienem nawolyac i spotykać się w celu zmian tych pomysłów. Brak poczucia sprawczości. Myślenie tylko o tym jak wykilonac rozkazy żeby nie było przypalu, a nie jak zrobić dobre, wartościowe rzeczy.
+4. Jesteśmy zmuszeni do spotkań na których nie mam wkładu. Nie organizujemy sobie spotkań które by się przydaly
+5. Źle rozpisujemy nasz system. Taski w Jirze służą do zapisaywania bugów, a nie do dzielenia systemu na funkcjonalności, przez to cały charakter naszej pracy dostosowuje się do flow jaki jest w Jirze.
+6. Intellisense mi nie działa.
+
+What do you think about it? Is it worth the time? Would you try to do it yourself? Do you have any other way of improving your workplace that really works?
+
+Sincerely yours,<br />
+~Marek
+
+[Discuss on twitter](https://twitter.com/marek_us/) • [Edit on GitHub](https://github.com/mcalus3/create-react-blog/blob/master/src/routes/posts/2019-04-08-continous-improvement/document-English.mdx)
