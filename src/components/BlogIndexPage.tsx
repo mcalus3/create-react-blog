@@ -44,13 +44,16 @@ function BlogIndexPage({
       )}
       <footer className={styles.footer}>
         <div>
-          <a href="./rss.xml" target="_blank" style={{ float: "right" }}>
-            RSS
-          </a>
           <Link href="./about">About me</Link> &bull;{" "}
           <Link href="./tags">Tags</Link> &bull;{" "}
           <a href="https://github.com/mcalus3/create-react-blog">
             Send me a pull request!
+          </a>{" "}
+          &bull;{" "}
+          <a href="http://eepurl.com/gmEEnX">Subscribe to my newsletter</a>{" "}
+          &bull;{" "}
+          <a href="./rss.xml" target="_blank">
+            RSS
           </a>
         </div>
       </footer>
