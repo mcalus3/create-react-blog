@@ -1,7 +1,7 @@
 export default {
-  title: `Continous improvement part 2`,
+  title: `Continuous improvement`,
   tags: ['thoughts'],
-  spoiler: "Couple of things that I've noticed lately to be improved.",
+  spoiler: "I've invented a method to improve my workplace.",
   languages: ['English', 'Polish'],
   getContent: () => import('./document-' + 'English' + '.mdx')
 };
