@@ -1,0 +1,15 @@
+img {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  max-width: 100%;
+}
+
+.imgMedium {
+  max-width: 75%;
+}
+
+.imgSmall {
+  max-width: 50%;
+}
