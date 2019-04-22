@@ -2,9 +2,9 @@ import styles from './document.module.css';
 import source_code from './code.ashx';
 import deal from './deal.jpg';
 import tweet from './tweet.png';
-import sets from './sets.png';
-import sets2 from './sets.png';
-import sets3 from './sets3.png';
+import sets from './sets1.svg';
+import sets2 from './sets2.svg';
+import sets3 from './sets3.svg';
 
 Programming seems to be a field in which everything is complicated and "depending on the situation". Even the simplest problems don't have one best solution (try asking on Twitter "which framework is the best to make a ToDo app" and watch the thread burn 😋). How can you learn anything in such an indecisive environment? How can you decide which rules and advice you should follow if every one of them got as many arguments _for_ as _against_?
 
@@ -56,11 +56,11 @@ We can depict dependency and coupling using sets:
 
 Dependency is a situation in which the red set **exists**. Coupling is a measure of how big it is – propability that after changing A we should also change B. And how many different modules can be affected after changing A (there could be more "red sets" inside the blue one):
 
-<img src={sets} alt="sets2" />
+<img src={sets2} alt="sets2" />
 
 We can break a red set into two complementary subsets - one would be **explicit coupling** and second **implicit coupling** (so the new set is: changes in A, which require change in B to _still be correct_, but aren't, necessary for program to _run_):
 
-<img src={sets3} alt="sets2" />
+<img src={sets3} alt="sets3" />
 
 ## How to avoid it?
 
@@ -182,4 +182,4 @@ What do you think about it? Am I right on this topic or did I miss something ess
 Sincerely yours,<br />
 ~Marek
 
-[Discuss on twitter](https://twitter.com/marek_us/) • [Edit on GitHub](https://github.com/mcalus3/create-react-blog/blob/master/src/routes/posts/2019-04-22-implicit-dependencies/document-English.mdx)
+[Discuss on twitter](https://twitter.com/marek_us/status/1120424329899069441) • [Edit on GitHub](https://github.com/mcalus3/create-react-blog/blob/master/src/routes/posts/2019-04-22-implicit-dependencies/document-English.mdx)
