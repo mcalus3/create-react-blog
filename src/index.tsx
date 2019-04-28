@@ -1,11 +1,12 @@
-import register from "navi-scripts/register";
-import * as Navi from "navi";
-import React from "react";
-import ReactDOM from "react-dom";
-import { NaviProvider, View } from "react-navi";
-import "./index.module.css";
-import routes from "./routes";
-import * as serviceWorker from "./serviceWorker";
+import register from 'navi-scripts/register';
+import * as Navi from 'navi';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { NaviProvider, View } from 'react-navi';
+import './index.module.css';
+import routes from './routes';
+import * as serviceWorker from './serviceWorker';
+import Head from './Head';
 
 // `register()` is responsible for exporting your app's pages and App
 // component to the static renderer, and for starting the app with the
@@ -28,16 +29,17 @@ register({
     // React requires that you call `ReactDOM.hydrate` if there is statically
     // rendered content in the root element, but prefers us to call
     // `ReactDOM.render` when it is empty.
-    let hasStaticContent = process.env.NODE_ENV === "production";
+    let hasStaticContent = process.env.NODE_ENV === 'production';
     let renderer = hasStaticContent ? ReactDOM.hydrate : ReactDOM.render;
 
     // Start react, passing in the current navigation state via the
     // NaviProvider.
     renderer(
       <NaviProvider navigation={navigation}>
+        <Head />
         <View />
       </NaviProvider>,
-      document.getElementById("root")
+      document.getElementById('root')
     );
 
     // If you want your app to work offline and load faster, you can change

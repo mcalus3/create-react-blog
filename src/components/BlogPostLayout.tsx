@@ -1,11 +1,11 @@
-import React from "react";
-import { Link, View, useCurrentRoute } from "react-navi";
-import { MDXProvider } from "@mdx-js/tag";
-import siteMetadata from "../siteMetadata";
-import ArticleMeta from "./ArticleMeta";
-import Bio from "./Bio";
-import styles from "./BlogPostLayout.module.css";
-import useTwitterCard from "../utils/useTwitterCard";
+import React from 'react';
+import { Link, View, useCurrentRoute } from 'react-navi';
+import { MDXProvider } from '@mdx-js/tag';
+import siteMetadata from '../siteMetadata';
+import ArticleMeta from './ArticleMeta';
+import Bio from './Bio';
+import styles from './BlogPostLayout.module.css';
+import { Helmet } from 'react-helmet';
 
 interface BlogPostLayoutProps {
   blogRoot: string;
@@ -13,7 +13,6 @@ interface BlogPostLayoutProps {
 
 function BlogPostLayout({ blogRoot }: BlogPostLayoutProps) {
   let { title, data, url } = useCurrentRoute();
-  useTwitterCard(title, data.spoiler);
 
   return (
     <View>
