@@ -1,0 +1,80 @@
+import styles from './document.module.css';
+import matrix from './matrix.jpg';
+
+# Introduction
+
+Our first lesson will be about hacking websites.
+
+<img src={matrix} alt="launch" />
+
+`But how can I hack websites if I don't even know how computers work?`
+
+Maybe you've never been programming. Maybe you are at the beginning of this journey and you've written only a couple of simple programs and you are not even sure if it's interesting for you. I would like to start this course from showing that coding can be entertaining and that it's like a superpower for a computer user.
+
+"Programming" means just writing commands for the computer (with intention to get the desired output, of course), nothing more. And the computer is a calculating machine, like the calculators you used at your school, just faster. Soon after first computers were built (ENIAC, 1943), people started realizing that they can create more complicated commands out of the existing ones (Assembly language, 1947).
+
+`obrazek kalkulatora z plusem, równa się i cyframi`
+
+It's like in maths. Imagine that you have a calculator that can only add numbers - if then someone told you to get the solution of an expression of 11 x 13 you could just translate it in your head to "repeat 11 times `13 + … + 13`" and find the solution using your calculator. In other words, _You can define multiplication as repeated addition_ (3 x 4 = 3 + 3 + 3 + 3). In the same way you can define exponentiation as repeated multiplication "repeat four times `3 x … x 3`" and so on...
+
+`zdjęcie tego kalkulatora obudowanego większym, który posiada też razy, które łączy się wewnętrznie z plusem przez bęben powtórzeń`
+
+All this "magic" that computer do nowadays is achieved the same way, but there are a lot more levels.
+
+`obrazek taki jak poprzednio tylko z wieloma warstwami`
+
+This short story is not meant to scary you – you don't have to know what's going on in all these layers of translation. In fact, no one really knows in the very details how all of this works. Everyone is taking care of his own field of expertise, his own layer. **And so can you.**
+
+We will learn about the top layer of these translations - **The Javascript language**. It's just a regulated way of saying things to a computer. To be more specific, to a web browser. Web browser is a program that does a lot of things and one of them is interpreting commands written in the Javascript language (part that does that is called "Javascript engine").
+
+`obrazek silnika, który przyjmuje jakieś proste wyrażenie w języku, przekazuje je do wewnętrznych warstw, potem zwraca Ci wynik`
+
+To be able to interactively participate in the rest of this lesson you have to read it on the computer, not the mobile device.
+
+Press the "f12" key to open your web browser devtools, go to the `console` tab and find the input bar at the bottom. It's the place where you can talk to the Javascript engine. I'll give you three examples of interesting commands you can give to it. If you want to learn the Javascript language, you will obviously start from simpler expressions like "2+2", but i've prepared these for your entertainment. Copy and paste them into the console, press enter and see what will happen.
+
+1.
+
+```js
+var answer = prompt(
+  'Podaj datę swoich urodzin w formacie MM/DD/RRRR, a powiem ci który to był dzień tygodnia',
+  '01/22/1995'
+);
+var days = [
+  'niedziela',
+  'poniedziałek',
+  'wtorek',
+  'środa',
+  'czwartek',
+  'piątek',
+  'sobota'
+];
+var d = new Date(answer);
+var dayName = days[d.getDay()];
+alert('Urodziłeś się w: ' + dayName);
+```
+
+2.
+
+```js
+Array.prototype.slice
+  .call(document.querySelectorAll('div,p,span,img,a,body'))
+  .map(function(tag) {
+    tag.style['transform'] =
+      'rotate(' + (Math.floor(Math.random() * 3) - 1) + 'deg)';
+  });
+```
+
+3.
+
+```js
+Array.prototype.slice.call(document.querySelectorAll('img')).map(function(tag) {
+  tag.src =
+    'https://www.top13.net/wp-content/uploads/2015/10/perfectly-timed-cat-photos-funny-cover.jpg';
+});
+```
+
+Sincerely yours,<br />
+~Marek
+
+[Discuss on twitter](https://twitter.com/marek_us/status/1122910607991279618) • [Edit on GitHub](https://github.com/mcalus3/create-react-blog/blob/master/src/routes/posts/2019-04-29-course-announcment/document-English.mdx)
