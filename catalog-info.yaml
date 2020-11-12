@@ -1,0 +1,11 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: create-react-blog
+  annotations:
+    github.com/project-slug: mcalus3/create-react-blog
+spec:
+  type: other
+  owner: mcalus3
+  lifecycle: unknown
